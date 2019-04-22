@@ -1,0 +1,242 @@
+<!DOCTYPE HTML/>
+
+<html>
+<head>
+<title> Index </title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans+Narrow" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+
+<style>
+html, body{
+margin: 0;
+padding: 0;
+}
+
+
+
+.menu {
+margin-top: 0px;
+
+
+}
+
+.menu  li{
+float: left;
+padding-left: 20px;
+list-style: none;
+font-family: 'PT Sans Narrow', sans-serif;
+
+
+}
+
+.menu  li a{
+font-size: 17px;
+text-decoration: none;
+color: black;
+transition: 0.2s;
+border-bottom: solid black 0.5px;
+}
+
+ul li a:hover{
+font-size: 17px;
+text-decoration: none;
+color: #aaa;
+border-bottom: solid #aaa 0.5px;
+}
+
+.text {
+
+font-size: 10px;
+width80%;
+height: 190px;
+margin-top: 80px;
+margin-left: 14%;
+
+}
+
+#img{
+width:270px;
+transition: 0.4s;
+}
+
+#img:hover{
+width: 273px;
+}
+
+h2{
+font-family: 'Lato', sans-serif;
+color: black;
+margin-top: -240px;
+margin-left: 45%;
+margin-right: 25%;
+}
+
+
+#conteudo{
+margin-top: 40%;
+}
+
+.bloco{
+width: 100%;
+height:600px;
+ background-color: #212121;
+color: white;
+font-family: 'PT Sans Narrow', sans-serif;
+font-size: 40px;
+
+}
+
+.bloco p{
+text-align: center;
+border-bottom: solid white 2.5px;
+}
+
+#about{
+height:400px;
+width: auto;
+background-color: #fff;
+font-family: 'PT Sans Narrow', sans-serif;
+font-size: 40px;
+text-align: center;
+}
+
+#about h3{
+ margin-top: 0px;
+font-family: 'PT Sans Narrow', sans-serif;
+font-size: 40px;
+border-bottom: solid black 2.5px;
+}
+
+.button a{
+
+widht: 20px;
+font-family: 'PT Sans Narrow', sans-serif;
+position: fixed;
+color: white;
+background-color: #212121;
+text-decoration: none;
+border-radius: 5px;
+padding: 15px 15px;
+margin-left: 95%;
+margin-top: 53%;
+border: solid  white 1.2px;
+}
+
+
+
+
+
+@media (max-width:600px){
+   h2{
+font-family: 'Lato', sans-serif;
+color: black;
+margin-top: -2px;
+margin-left: 2%;
+margin-right: 2%;
+text-align: center;
+padding-bottom: 80px;}
+
+.text{
+text-align: center;
+ width:270px;
+  transition: 1s;
+height: auto;
+
+}
+
+.text img{
+text-align: center;
+
+
+}
+
+
+
+}
+
+</style>
+
+ </head>
+<body> 
+
+
+<ul class="menu">
+<li><a  href="#home">HOME</a></li>
+<li><a href="#works">WORKS</a></li>
+<li><a href="#about">ABOUT US</a></li>
+<li><a href="#contact">CONTACT</a></li>
+</ul>
+
+
+</br>
+</br>
+
+<div class="button"><a  href="#subir">UP</a></div>
+
+
+
+<div class="text">
+
+<img id="img" src="https://d6ce0no7ktiq.cloudfront.net/images/preview/2017/01/11/design-12293/template-sticker-600x600.png" />
+
+         <h2>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed convallis augue. Nulla vel velit lobortis, dapibus enim eu, lobortis lectus.
+ Nam tincidunt tellus eget magna pellentesque, in tempor est ullamcorper. 
+Nunc efficitur, mi a imperdiet ultricies, quam enim vehicula ligula, nec cursus dui elit id enim. 
+Maecenas efficitur gravida quam eu finibus. Nulla facilisi. 
+Cras dui tortor, iaculis vel tempus sit amet, elementum vel purus.
+             </h2>
+</div>
+
+</br>
+
+<div id="conteudo">
+       <div class="bloco">  
+      <p id="works"> WORKS </p>
+       </div>
+ </div>
+
+<div id="about"> 
+           <h3>  ABOUT US </h3>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<script>
+  var link = $(".menu li a");
+var subir = $(".button");
+
+$(window).scroll(function(){
+var minhaposicao = $(this).scrollTop();
+if(minhaposicao >= 500){
+  subir.fadeIn();
+}else{
+subir.fadeOut();
+}
+});
+
+link.on("click", function(){
+     var seletor = $(this).attr("href");
+     var position = $(seletor).offset().top;
+    $("html, body").animate({scrollTop: position}, 700);
+});
+
+subir.on("click", function(){
+    $("html, body").animate({scrollTop: 0}, 350);
+});
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+ </html>
