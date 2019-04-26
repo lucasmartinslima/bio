@@ -241,6 +241,14 @@ color: white;
 animation: bar-80 3s;
 }
 
+.bar-67{
+background-color: #3299BB;
+border-radius: 5px 8px 8px 5px;
+width: 67%;
+height: 17px;
+color: white;
+animation: bar-67 3s;
+}
 
 .bar-97{
 background-color: #3299BB;
@@ -315,6 +323,11 @@ text-align: center;
 @keyframes bar-57{
     0% {width: 0%;}
     100% {width: 57%;}
+}
+
+@keyframes bar-67{
+    0% {width: 0%;}
+    100% {width: 67%;}
 }
 
 @keyframes bar-72{
